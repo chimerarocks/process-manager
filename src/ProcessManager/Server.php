@@ -33,9 +33,4 @@ class Server
 			$server->listen();
 		}
 	}
-
-	private function identifyCliInputReader()
-	{
-
-	}
 }
