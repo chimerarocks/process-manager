@@ -1,7 +1,8 @@
 {
     "require": {
         "doctrine/orm": "^2.5",
-        "chimerarocks/process-manager": "*"
+        "chimerarocks/process-manager": "*",
+        "symfony/yaml": "^3.1"
     },
 	"autoload": {
 			"psr-4": {
