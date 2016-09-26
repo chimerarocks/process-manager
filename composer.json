@@ -6,5 +6,9 @@
             "email": "joaopedrodslv@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+		"psr-4": {
+            "ProcessManager\\": "src/ProcessManager",
+        }
+	}
 }
