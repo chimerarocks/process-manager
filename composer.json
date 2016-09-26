@@ -1,0 +1,10 @@
+{
+    "name": "chimerarocks/process-manager",
+    "authors": [
+        {
+            "name": "chimerarocks",
+            "email": "joaopedrodslv@gmail.com"
+        }
+    ],
+    "require": {}
+}
