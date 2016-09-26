@@ -10,5 +10,21 @@
 		"psr-4": {
             "ProcessManager\\": "src/ProcessManager"
         }
-	}
+	},
+     "require": {
+        "monolog/monolog": "^1.19",
+        "doctrine/orm": "^2.5",
+        "symfony/yaml": "^3.1",
+        "symfony/var-dumper": "^3.1",
+        "phpunit/phpunit": "^5.4",
+        "jms/serializer": "^1.1",
+        "psr/http-message": "^1.0",
+        "zendframework/zend-diactoros": "^1.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "doctrine/data-fixtures": "^1.2",
+        "fzaninotto/faker": "^1.6",
+        "chimerarocks/faker-factory": "^0.0.1"
+    }
 }
