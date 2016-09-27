@@ -16,7 +16,7 @@ class ORMManager {
 	{
 		if (!isset(self::$instance) || !self::$instance->isOpen()) {
 
-			$paths = DB_PATHS;
+			$paths = [DB_PATHS];
 			$isDevMode = DB_DEV;
 
 			$config = Setup::createYamlMetadataConfiguration($paths, $isDevMode);
