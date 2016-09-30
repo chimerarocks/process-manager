@@ -17,7 +17,6 @@ abstract class Process
 	{
 		if (empty($this->reader)) {
 			throw new \Exception("Process Manager Error: Reader is not setted", 1);
-			
 		}
 
 		$params = $this->reader->getParams();
