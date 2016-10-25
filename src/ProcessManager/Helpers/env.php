@@ -1,7 +1,7 @@
 <?php
 
 if (file_exists(BASE_PATH . '/env.yaml')) {
-	$GLOBALS["ENVIRONMENT"] = yaml_parse_file(BASE_PATH . '/env.yaml');
+	$GLOBALS["ENVIRONMENT"] = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(BASE_PATH . '/env.yaml'));
 } else {
 	throw new Exception("Env file was not created.", 1);
 }
