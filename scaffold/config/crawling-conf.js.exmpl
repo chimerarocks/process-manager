@@ -1,0 +1,13 @@
+exports.host = "http://api.botservices.com.br";
+
+exports.recon_path = "/botdetran/captchareader";
+
+exports.debug = {
+	isRunning: false,
+	seeConsole: false,
+	holdCaptchaFilled: false,
+	holdCaptcha: false,
+	holdFinalPoint: false
+};
+
+exports.resource_path = "/var/www/api.botservices.com.br/botdetran/resources/";

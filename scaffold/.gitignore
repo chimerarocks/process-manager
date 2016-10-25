@@ -1,0 +1,9 @@
+/vendor
+/resources/*.jpg
+/config/crawling-conf.js
+/scripts/*.js
+/scripts/node_modules
+env.yaml
+composer.lock
+tmp/**/*.log
+.phpintel
