@@ -2,7 +2,7 @@
 
 
 	require_once __DIR__ . "/../vendor/autoload.php";
-	require_once __DIR__ . "/../lib/ProcessManager/kernel.php";
+	require_once __DIR__ . "/../vendor/chimerarocks/process-manager/src/ProcessManager/kernel.php";
 
 	use Doctrine\ORM\Tools\Console\ConsoleRunner;
 	use Doctrine\ORM\Tools\Setup;
