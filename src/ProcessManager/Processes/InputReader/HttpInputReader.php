@@ -22,12 +22,16 @@ class HttpInputReader extends InputReader
 		$this->query = $_SERVER['QUERY_STRING'];
 		$this->method = $_SERVER['REQUEST_METHOD'];
 		$this->request = $args['_'.$this->method];
-		$test = str_replace('/', '\/', rtrim(BASE_URI, '/') . '/');
-		preg_match('/\/' . $test . '(.*?)\/?$/', $route, $matches);
-		if (!isset($matches[1])) {
-			throw new \Exception("Sua configuração para BASE_URI não pode ser encontrada na url.", 1);
+		if (!empty(BASE_URI)) {
+			$test = str_replace('/', '\/', rtrim(BASE_URI, '/') . '/');
+			preg_match('/\/' . $test . '(.*?)\/?$/', $route, $matches);
+			if (!isset($matches[1])) {
+				throw new \Exception("Sua configuração para BASE_URI não pode ser encontrada na url.", 1);
+			}
+			$this->route = $matches[1];
+		} else {
+			$this->route = '';
 		}
-		$this->route = $matches[1];
 	}
 
 	public function getParams()
