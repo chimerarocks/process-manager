@@ -22,6 +22,7 @@ class HttpInputReader extends InputReader
 		$this->query = $_SERVER['QUERY_STRING'];
 		$this->method = $_SERVER['REQUEST_METHOD'];
 		$this->request = $args['_'.$this->method];
+		
 		if (!empty(BASE_URI)) {
 			$test = str_replace('/', '\/', rtrim(BASE_URI, '/') . '/');
 			preg_match('/\/' . $test . '(.*?)\/?$/', $route, $matches);
@@ -30,7 +31,8 @@ class HttpInputReader extends InputReader
 			}
 			$this->route = $matches[1];
 		} else {
-			$this->route = '';
+			preg_match('/\/(.*?)\/?$/', $route, $matches);
+			$this->route = $matches[1];
 		}
 	}
 
